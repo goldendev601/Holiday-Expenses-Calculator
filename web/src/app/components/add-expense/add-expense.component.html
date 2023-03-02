@@ -1,0 +1,16 @@
+<form class="add-expense-form">
+
+    <mat-form-field class="example-full-width">
+        <mat-label>Name</mat-label>
+        <input matInput placeholder="Ex. James" [(ngModel)]="name" name="name">
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+        <mat-label>Amount</mat-label>
+        <input matInput placeholder="Ex. 10" [(ngModel)]="amount" name="amount">
+    </mat-form-field>
+
+    <button (click)="handleClick()">Add New Expense</button>
+
+</form>
+

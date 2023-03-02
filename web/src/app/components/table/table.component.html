@@ -1,0 +1,14 @@
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Expense</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let expense of expenses;">
+            <td>{{expense.name}}</td>
+            <td>{{expense.amount}}</td>
+        </tr>
+    </tbody>
+</table>
