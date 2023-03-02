@@ -32,7 +32,7 @@ app.post("/payouts", jsonParser, (req, res, next) => {
         expenses_by_person[expense.name] = expense.amount
       }
     }
-    sum = expenses.reduce((prev, expense) => prev + parseInt(expense.amount), 0)
+    sum = expenses.reduce((prev, expense) => prev + parseFloat(expense.amount), 0)
 
     equalShare = sum / Object.keys(expenses_by_person).length;
 
@@ -60,8 +60,8 @@ app.post("/payouts", jsonParser, (req, res, next) => {
       for (const owed_i of owed) {
         const amount = owed_i['amount'] / owed_total * owe_amount
         payouts.push({
-          'owed': owed_i['name'],
           'owes': owes_i['name'],
+          'owed': owed_i['name'],
           'amount': amount
         })
       }
