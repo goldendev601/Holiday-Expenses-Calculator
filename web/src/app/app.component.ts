@@ -10,6 +10,7 @@ import { IExpense } from './types/expense.type';
 export class AppComponent implements OnInit {
   title = 'calculator';
   expenses: IExpense[] = [];
+  json_data = "";
 
 
   constructor(private settleService: SettleService) {
@@ -25,6 +26,7 @@ export class AppComponent implements OnInit {
   settleUp () {
     this.settleService.up(this.expenses).subscribe(data => {
       console.log(data);
+      this.json_data = JSON.stringify(data, null, 4)
     });
   }
 }
