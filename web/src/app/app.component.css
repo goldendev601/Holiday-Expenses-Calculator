@@ -1,0 +1,18 @@
+.main-wrapper {
+    width: 100%;
+    padding: 50px;
+}
+
+.main-container {
+    width: 100%;
+    margin-top: 50px;
+    margin: auto;
+}
+
+#response {
+    margin-top: 20px;
+}
+
+.label {
+    margin-top: 20px;
+}

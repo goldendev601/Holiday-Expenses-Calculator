@@ -1,11 +1,15 @@
-<div>
-    <app-add-expense (onClick)="addExpense($event)"></app-add-expense>
-    <app-settle-button (onClick)="settleUp()"></app-settle-button>
-    <app-table [expenses]="expenses"></app-table>
+<div class="main-wrapper">
+    <h1>Holiday Expenses Calculator</h1>
+    <div class="main-container">
+        <app-add-expense (onClick)="addExpense($event)"></app-add-expense>
+        <app-table [expenses]="expenses"></app-table>
+        <app-settle-button (onClick)="settleUp()"></app-settle-button>
+    </div>
+
+    <h4 class="label" *ngIf="json_data != ''">JSON Response From Server Side</h4>
+    <div id="response">
+        {{json_data}}
+    </div>
 </div>
 
-
-<div id="response">
-    {{json_data}}
-</div>
 

@@ -1,8 +1,10 @@
-<table>
-    <thead>
+<h2>Expenses Table</h2>
+<h4 *ngIf="!expenses.length">There is nothing added to the table. please add a new expense by clicking "Add new Expense" button.</h4>
+<table class="expense-table">
+    <thead *ngIf="expenses.length">
         <tr>
             <th>Name</th>
-            <th>Expense</th>
+            <th>Amount</th>
         </tr>
     </thead>
     <tbody>
@@ -12,3 +14,4 @@
         </tr>
     </tbody>
 </table>
+
